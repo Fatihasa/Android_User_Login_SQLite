@@ -107,9 +107,11 @@ public class DataBase extends SQLiteOpenHelper {
     public void deleteUser (UserModel userModel){
 
         SQLiteDatabase db = this.getReadableDatabase();
-        String quaryString = "DELETE FROM " + USER_TABLE + "WHERE " + COLUMN_USER_ID + " = " + userModel.getId();
+        String quaryString = "DELETE FROM " + USER_TABLE + " WHERE " + COLUMN_USER_ID + " = " + userModel.getId();
 
         Cursor cursor = db.rawQuery(quaryString,null);
+
+
 
     }
 }
